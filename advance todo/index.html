@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List App - JavaScript Fundamentals</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1 class="title">📝 Todo List</h1>
+            <p class="subtitle">Master JavaScript Fundamentals</p>
+        </header>
+
+        <main class="main">
+            <!-- Add Todo Form -->
+            <form class="todo-form" id="todoForm">
+                <div class="input-group">
+                    <input 
+                        type="text" 
+                        id="todoInput" 
+                        class="todo-input" 
+                        placeholder="What needs to be done?"
+                        required
+                        autocomplete="off"
+                    >
+                    <button type="submit" class="add-btn">
+                        <span class="add-icon">+</span>
+                    </button>
+                </div>
+            </form>
+
+            <!-- Todo Controls -->
+            <div class="todo-controls" id="todoControls" style="display: none;">
+                <div class="filters">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="active">Active</button>
+                    <button class="filter-btn" data-filter="completed">Completed</button>
+                </div>
+                <button class="clear-btn" id="clearCompleted">Clear Completed</button>
+            </div>
+
+            <!-- Todo List -->
+            <ul class="todo-list" id="todoList">
+                <!-- Todos will be dynamically added here -->
+            </ul>
+
+            <!-- Empty State -->
+            <div class="empty-state" id="emptyState">
+                <div class="empty-icon">📝</div>
+                <h3>No todos yet!</h3>
+                <p>Add your first todo to get started</p>
+            </div>
+
+            <!-- Stats -->
+            <div class="stats" id="stats" style="display: none;">
+                <span class="stats-text">
+                    <span id="activeCount">0</span> items left
+                </span>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 
